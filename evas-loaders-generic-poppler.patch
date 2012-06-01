@@ -1,0 +1,19 @@
+--- evas_generic_loaders-1.2.0/src/bin/pdf/main.cpp.orig	2011-05-13 11:02:59.000000000 +0200
++++ evas_generic_loaders-1.2.0/src/bin/pdf/main.cpp	2012-06-01 20:23:03.880429097 +0200
+@@ -157,14 +157,14 @@
+    if (!output_dev)
+      return;
+ 
+-   output_dev->startDoc(pdfdoc->getXRef());
++   output_dev->startDoc(pdfdoc);
+ 
+    if (dpi <= 0.0) dpi = DEF_DPI;
+ 
+    page->displaySlice(output_dev, dpi, dpi, 
+                       0, false, false,
+                       0, 0, width, height,
+-                      false, pdfdoc->getCatalog());
++                      false);
+    color_ptr = output_dev->getBitmap()->getDataPtr();
+ 
+    shm_alloc(crop_width * crop_height * sizeof(DATA32));
