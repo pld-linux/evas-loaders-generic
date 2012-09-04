@@ -7,7 +7,6 @@ License:	GPL v2
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/evas_generic_loaders-%{version}.tar.bz2
 # Source0-md5:	64df7ed7b161b0cc3f37cf1ca20478cb
-#Patch0:		%{name}-poppler.patch
 URL:		http://trac.enlightenment.org/e/wiki/Evas
 BuildRequires:	cairo-devel >= 1.0.0
 BuildRequires:	eina-devel >= 1.7.0
