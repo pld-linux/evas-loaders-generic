@@ -1,23 +1,30 @@
 Summary:	Generic loaders for Evas library
 Summary(pl.UTF-8):	Ogólne programy wczytujące dla biblioteki Evas
 Name:		evas-loaders-generic
-Version:	1.2.0
+Version:	1.7.0
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/evas_generic_loaders-%{version}.tar.bz2
-# Source0-md5:	45a70266583bc27ee45885a8b60612bf
-Patch0:		%{name}-poppler.patch
+# Source0-md5:	64df7ed7b161b0cc3f37cf1ca20478cb
+#Patch0:		%{name}-poppler.patch
 URL:		http://trac.enlightenment.org/e/wiki/Evas
-BuildRequires:	eina-devel >= 1.2.0
+BuildRequires:	cairo-devel >= 1.0.0
+BuildRequires:	eina-devel >= 1.7.0
 BuildRequires:	gstreamer-devel >= 0.10.13
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10.13
 BuildRequires:	libraw-devel
+BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libspectre-devel
 BuildRequires:	pkgconfig
 BuildRequires:	poppler-devel >= 0.20
 BuildRequires:	zlib-devel
-Requires:	eina >= 1.2.0
+Requires:	cairo >= 1.0.0
+Requires:	eina >= 1.7.0
+Requires:	gstreamer >= 0.10.13
+Requires:	gstreamer-plugins-base >= 0.10.13
+Requires:	librsvg >= 2.14.0
+Requires:	poppler >= 0.20
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,6 +41,7 @@ This package contains the following loaders:
 - PDF, using poppler
 - PS for PhostScript files, using libspectre
 - RAW for raw photos, using libraw
+- SVG for SVG graphics, using librsvg
 - XCF
 
 %description -l pl.UTF-8
@@ -51,11 +59,11 @@ Ten pakiet zawiera następujące moduły wczytujące:
 - PDF wykorzystujący popplera
 - PS do plików PostScriptowych, wykorzystujący libspectre
 - RAW do zdjęć w formacie surowym, wykorzystujący libraw
+- SVG do rysunków SVG, wykorzystujący librsvg
 - XCF
 
 %prep
 %setup -q -n evas_generic_loaders-%{version}
-%patch0 -p1
 
 %build
 %configure \
