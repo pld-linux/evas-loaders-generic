@@ -2,7 +2,7 @@ Summary:	Generic loaders for Evas library
 Summary(pl.UTF-8):	Ogólne programy wczytujące dla biblioteki Evas
 Name:		evas-loaders-generic
 Version:	1.7.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/evas_generic_loaders-%{version}.tar.bz2
@@ -81,4 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
+%dir %{_libdir}/evas/utils
 %attr(755,root,root) %{_libdir}/evas/utils/evas_image_loader.*
