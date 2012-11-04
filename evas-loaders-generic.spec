@@ -1,17 +1,17 @@
 Summary:	Generic loaders for Evas library
 Summary(pl.UTF-8):	Ogólne programy wczytujące dla biblioteki Evas
 Name:		evas-loaders-generic
-Version:	1.7.0
-Release:	3
+Version:	1.7.1
+Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/evas_generic_loaders-%{version}.tar.bz2
-# Source0-md5:	64df7ed7b161b0cc3f37cf1ca20478cb
+# Source0-md5:	f22373efa376414ab4212353511ced2a
 URL:		http://trac.enlightenment.org/e/wiki/Evas
 BuildRequires:	cairo-devel >= 1.0.0
 BuildRequires:	eina-devel >= 1.7.0
-BuildRequires:	gstreamer-devel >= 0.10.13
-BuildRequires:	gstreamer-plugins-base-devel >= 0.10.13
+BuildRequires:	gstreamer0.10-devel >= 0.10.13
+BuildRequires:	gstreamer0.10-plugins-base-devel >= 0.10.13
 BuildRequires:	libraw-devel
 BuildRequires:	librsvg-devel >= 2.14.0
 BuildRequires:	libspectre-devel
@@ -20,8 +20,8 @@ BuildRequires:	poppler-devel >= 0.20
 BuildRequires:	zlib-devel
 Requires:	cairo >= 1.0.0
 Requires:	eina >= 1.7.0
-Requires:	gstreamer >= 0.10.13
-Requires:	gstreamer-plugins-base >= 0.10.13
+Requires:	gstreamer0.10 >= 0.10.13
+Requires:	gstreamer0.10-plugins-base >= 0.10.13
 Requires:	librsvg >= 2.14.0
 Requires:	poppler >= 0.20
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
