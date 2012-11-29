@@ -1,12 +1,12 @@
 Summary:	Generic loaders for Evas library
 Summary(pl.UTF-8):	Ogólne programy wczytujące dla biblioteki Evas
 Name:		evas-loaders-generic
-Version:	1.7.1
+Version:	1.7.2
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/evas_generic_loaders-%{version}.tar.bz2
-# Source0-md5:	f22373efa376414ab4212353511ced2a
+# Source0-md5:	c47aadce594d6934a9ed1ea51b10d8ff
 URL:		http://trac.enlightenment.org/e/wiki/Evas
 BuildRequires:	cairo-devel >= 1.0.0
 BuildRequires:	eina-devel >= 1.7.0
