@@ -9,7 +9,7 @@ Source0:	http://download.enlightenment.org/releases/evas_generic_loaders-%{versi
 # Source0-md5:	c6298d394e1cc6eba73c5df6aeffcbb5
 URL:		http://trac.enlightenment.org/e/wiki/Evas
 BuildRequires:	cairo-devel >= 1.0.0
-BuildRequires:	eina-devel >= 1.7.0
+BuildRequires:	eina-devel >= 1.7.5
 BuildRequires:	gstreamer0.10-devel >= 0.10.13
 BuildRequires:	gstreamer0.10-plugins-base-devel >= 0.10.13
 BuildRequires:	libraw-devel
@@ -19,7 +19,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	poppler-devel >= 0.20
 BuildRequires:	zlib-devel
 Requires:	cairo >= 1.0.0
-Requires:	eina >= 1.7.0
+Requires:	eina >= 1.7.5
 Requires:	gstreamer0.10 >= 0.10.13
 Requires:	gstreamer0.10-plugins-base >= 0.10.13
 Requires:	librsvg >= 2.14.0
