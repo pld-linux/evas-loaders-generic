@@ -1,0 +1,14 @@
+--- evas_generic_loaders-1.7.10/src/bin/pdf/main.cpp~	2013-07-29 16:48:13.000000000 +0200
++++ evas_generic_loaders-1.7.10/src/bin/pdf/main.cpp	2015-04-11 17:06:34.169139491 +0200
+@@ -58,11 +58,6 @@
+    if (!eina_init())
+      goto del_global_param;
+ 
+-   if (globalParams->getAntialias())
+-     globalParams->setAntialias((char *)"yes");
+-   if (globalParams->getVectorAntialias())
+-     globalParams->setVectorAntialias((char *)"yes");
+-
+    pdfdoc = new PDFDoc(new GooString(file), NULL);
+    if (!pdfdoc)
+      goto del_global_param;
