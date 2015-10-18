@@ -1,0 +1,26 @@
+--- evas_generic_loaders-1.10.0/src/bin/pdf/main.cpp.orig	2013-12-11 14:56:58.000000000 +0100
++++ evas_generic_loaders-1.10.0/src/bin/pdf/main.cpp	2015-10-18 20:21:56.289112059 +0200
+@@ -62,11 +62,6 @@
+    if (!eina_init())
+      goto del_global_param;
+ 
+-   if (globalParams->getAntialias())
+-     globalParams->setAntialias((char *)"yes");
+-   if (globalParams->getVectorAntialias())
+-     globalParams->setVectorAntialias((char *)"yes");
+-
+    pdfdoc = new PDFDoc(new GooString(file), NULL);
+    if (!pdfdoc)
+      goto del_global_param;
+@@ -161,6 +156,11 @@
+    if (!output_dev)
+      return;
+ 
++   if (output_dev->getFontAntialias())
++     output_dev->setFontAntialias(true);
++   if (output_dev->getVectorAntialias())
++     output_dev->setVectorAntialias(true);
++
+ #ifdef HAVE_POPPLER_020
+    output_dev->startDoc(pdfdoc);
+ #else
